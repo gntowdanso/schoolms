@@ -70,15 +70,16 @@ class PersonalInfo(models.Model):
     date_of_birth = models.DateField()
     place_of_birth = models.CharField(max_length=45)
     nationality_choice = (
-        ('Bangladeshi', 'Bangladeshi'),
+        ('Ghana', 'Ghana'),
         ('Others', 'Others')
     )
     nationality = models.CharField(max_length=45, choices=nationality_choice)
     religion_choice = (
+         ('Christianity', 'Christianity'),
         ('Islam', 'Islam'),
         ('Hinduism', 'Hinduism'),
         ('Buddhism', 'Buddhism'),
-        ('Christianity', 'Christianity'),
+       
         ('Others', 'Others')
     )
     religion = models.CharField(max_length=45, choices=religion_choice)

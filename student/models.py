@@ -29,15 +29,18 @@ class PersonalInfo(models.Model):
     email = models.EmailField(blank=True, null=True)
     birth_certificate_no = models.IntegerField()
     religion_choice = (
+         ('Christianity', 'Christianity'),
         ('Islam', 'Islam'),
         ('Hinduism', 'Hinduism'),
         ('Buddhism', 'Buddhism'),
-        ('Christianity', 'Christianity'),
+       
         ('Others', 'Others')
     )
     religion = models.CharField(choices=religion_choice, max_length=45)
     nationality_choice = (
-        ('Bangladeshi', 'Bangladeshi'),
+        ('Ghana', 'Ghana'),
+        ('Togo', 'Togo'),
+        ('Nigeria', 'Nigeria'),
         ('Others', 'Others')
     )
     nationality = models.CharField(choices=nationality_choice, max_length=45)
